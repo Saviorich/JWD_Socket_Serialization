@@ -51,6 +51,26 @@ public class Text implements Serializable {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Text text1 = (Text) o;
+
+        if (text != null ? !text.equals(text1.text) : text1.text != null) return false;
+        if (sentences != null ? !sentences.equals(text1.sentences) : text1.sentences != null) return false;
+        return words != null ? words.equals(text1.words) : text1.words == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = text != null ? text.hashCode() : 0;
+        result = 31 * result + (sentences != null ? sentences.hashCode() : 0);
+        result = 31 * result + (words != null ? words.hashCode() : 0);
+        return result;
+    }
+
+    @Override
     public String toString() {
         return text;
     }

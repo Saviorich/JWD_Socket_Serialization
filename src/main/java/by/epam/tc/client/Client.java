@@ -3,7 +3,7 @@ package by.epam.tc.client;
 import by.epam.tc.dto.Request;
 import by.epam.tc.dto.Response;
 import by.epam.tc.entity.Text;
-import by.epam.tc.reader.TxtReader;
+import by.epam.tc.reader.impl.TxtReader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
